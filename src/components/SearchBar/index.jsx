@@ -1,20 +1,21 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 function SearchBar({ onSearch }) {
   const [input, setInput] = useState('')
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    onSearch(input.trim())
-  }
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      onSearch(input.trim())
+    }, 400)
+    return () => clearTimeout(timer)
+  }, [input])
 
   const handleClear = () => {
     setInput('')
-    onSearch('')
   }
 
   return (
-    <form className="search-bar" onSubmit={handleSubmit}>
+    <form className="search-bar" onSubmit={e => e.preventDefault()}>
       <input
         type="text"
         className="search-input"
@@ -35,4 +36,3 @@ function SearchBar({ onSearch }) {
 }
 
 export default SearchBar
-
