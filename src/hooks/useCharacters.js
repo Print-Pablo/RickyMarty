@@ -2,14 +2,7 @@ import { useState, useEffect } from 'react'
 
 const BASE_URL = 'https://rickandmortyapi.com/api/character'
 
-/**
- * Hook para consultar personajes de la API de Rick and Morty.
- * Soporta filtro por especie, busqueda por nombre y paginacion.
- *
- * @param {string} species  - Especie para filtrar
- * @param {number} page     - Pagina actual
- * @param {string} name     - Nombre para buscar
- */
+
 const useCharacters = (species = '', page = 1, name = '') => {
   const [characters, setCharacters] = useState([])
   const [loading, setLoading]       = useState(true)
@@ -22,7 +15,7 @@ const useCharacters = (species = '', page = 1, name = '') => {
       setError(null)
       try {
         const params = new URLSearchParams()
-        if (!name) params.append('page', page)   // sin paginacion al buscar
+        if (!name) params.append('page', page)   
         if (species) params.append('species', species)
         if (name)    params.append('name', name)
 
@@ -54,3 +47,4 @@ const useCharacters = (species = '', page = 1, name = '') => {
 }
 
 export default useCharacters
+

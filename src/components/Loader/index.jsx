@@ -1,6 +1,4 @@
-/**
- * Indicador visual de carga (spinner).
- */
+
 function Loader() {
   return (
     <div className="loader-wrapper" role="status" aria-label="Cargando...">
@@ -10,3 +8,4 @@ function Loader() {
 }
 
 export default Loader
+

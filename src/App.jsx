@@ -9,10 +9,10 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Landing sin navbar */}
+        {}
         <Route path="/" element={<Landing />} />
 
-        {/* Rutas con navbar */}
+        {}
         <Route
           path="/*"
           element={
@@ -34,3 +34,4 @@ function App() {
 }
 
 export default App
+

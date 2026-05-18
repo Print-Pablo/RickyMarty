@@ -29,9 +29,7 @@ body {
   min-height: 100vh;
 }
 
-/* ═══════════════════════════════
-   LANDING PAGE
-═══════════════════════════════ */
+
 .landing {
   position: relative;
   min-height: 100vh;
@@ -167,9 +165,7 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* ═══════════════════════════════
-   NAVBAR
-═══════════════════════════════ */
+
 .navbar {
   background-color: var(--bg-secondary);
   border-bottom: 2px solid var(--color-glow);
@@ -182,7 +178,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
-  height: 80px;           /* ← mas alto */
+  height: 80px;           
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -193,7 +189,7 @@ body {
   align-items: center;
   gap: 0.8rem;
   font-family: var(--font-rick);
-  font-size: 1.7rem;      /* ← mas grande */
+  font-size: 1.7rem;      
   font-weight: 400;
   color: var(--color-primary);
   text-decoration: none;
@@ -202,7 +198,7 @@ body {
   letter-spacing: 1px;
 }
 .navbar-logo {
-  width: 48px;            /* ← mas grande */
+  width: 48px;            
   height: 48px;
   object-fit: contain;
   filter: drop-shadow(0 0 8px rgba(255,20,147,0.6));
@@ -215,7 +211,7 @@ body {
 }
 .navbar-links a {
   font-family: var(--font-rick);
-  font-size: 1.1rem;      /* ← mas grande */
+  font-size: 1.1rem;      
   color: var(--color-text);
   text-decoration: none;
   padding: 0.5rem 1.2rem;
@@ -230,9 +226,7 @@ body {
   box-shadow: var(--glow);
 }
 
-/* ═══════════════════════════════
-   HAMBURGUESA
-═══════════════════════════════ */
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -261,26 +255,30 @@ body {
 
 @media (max-width: 640px) {
   .hamburger { display: flex; }
-  .navbar-links {
+    .navbar-links {
     display: none;
-    position: absolute;
-    top: 80px;
-    left: 0; right: 0;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    height: 100vh;
     background: var(--bg-secondary);
-    border-bottom: 2px solid var(--color-glow);
     flex-direction: column;
-    padding: 0.8rem 1.2rem 1rem;
-    gap: 0.3rem;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 1.5rem;
+    z-index: 150;
   }
   .navbar-links.show { display: flex; }
-  .navbar-links a { padding: 0.7rem 0.8rem; width: 100%; }
+    .navbar-links a { 
+    padding: 1rem 2rem; 
+    width: auto; 
+    font-size: 1.8rem; 
+    text-align: center;
+  }
   .navbar { position: relative; }
 }
 
-/* ═══════════════════════════════
-   LAYOUT GENERAL
-═══════════════════════════════ */
+
 .main-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -288,7 +286,7 @@ body {
 }
 .page-title {
   font-family: var(--font-rick);
-  font-size: 2.2rem;       /* ← mas grande */
+  font-size: 2.2rem;       
   font-weight: 400;
   color: var(--color-primary);
   margin-bottom: 1.5rem;
@@ -296,9 +294,7 @@ body {
   letter-spacing: 1px;
 }
 
-/* ═══════════════════════════════
-   SEARCH BAR
-═══════════════════════════════ */
+
 .search-bar {
   display: flex;
   align-items: center;
@@ -359,9 +355,7 @@ body {
   margin-bottom: 1.2rem;
 }
 
-/* ═══════════════════════════════
-   CARD GRID
-═══════════════════════════════ */
+
 .character-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -421,9 +415,7 @@ body {
 .status-dead    { background-color: var(--color-error); }
 .status-unknown { background-color: var(--color-muted); }
 
-/* ═══════════════════════════════
-   FILTER BAR
-═══════════════════════════════ */
+
 .filter-section { margin-bottom: 2rem; }
 .filter-label {
   font-size: 0.85rem;
@@ -451,9 +443,7 @@ body {
   box-shadow: var(--glow);
 }
 
-/* ═══════════════════════════════
-   DETAIL CARD (busqueda)
-═══════════════════════════════ */
+
 .detail-card {
   display: flex;
   background: var(--bg-card);
@@ -501,9 +491,7 @@ body {
 .detail-card-sm img { width: 120px; min-width: 120px; object-fit: cover; }
 .detail-card-sm-body { padding: 1rem; display: flex; flex-direction: column; gap: 0.4rem; justify-content: center; }
 
-/* ═══════════════════════════════
-   CHARACTER PROFILE
-═══════════════════════════════ */
+
 .profile-wrapper { display: flex; flex-direction: column; gap: 1.5rem; }
 .btn-volver {
   align-self: flex-start;
@@ -555,9 +543,7 @@ body {
 .profile-label { font-size: 0.72rem; color: var(--color-muted); text-transform: uppercase; letter-spacing: 0.6px; }
 .profile-value { font-size: 1rem; color: var(--color-text); font-weight: 500; display: flex; align-items: center; }
 
-/* ═══════════════════════════════
-   LOADER
-═══════════════════════════════ */
+
 .loader-wrapper { display: flex; justify-content: center; align-items: center; padding: 5rem 0; }
 .loader {
   width: 52px; height: 52px;
@@ -569,15 +555,11 @@ body {
 }
 @keyframes spin { to { transform: rotate(360deg); } }
 
-/* ═══════════════════════════════
-   MESSAGES
-═══════════════════════════════ */
+
 .error-message { text-align: center; color: var(--color-error); padding: 2.5rem; font-size: 1rem; }
 .empty-message { text-align: center; color: var(--color-muted); padding: 2.5rem; font-size: 1rem; }
 
-/* ═══════════════════════════════
-   PAGINATION
-═══════════════════════════════ */
+
 .pagination {
   display: flex;
   align-items: center;
@@ -604,9 +586,7 @@ body {
 .pagination-btn:disabled { opacity: 0.3; cursor: not-allowed; }
 .pagination-info { font-size: 0.85rem; color: var(--color-muted); padding: 0 0.5rem; }
 
-/* ═══════════════════════════════
-   ERROR PAGE
-═══════════════════════════════ */
+
 .error-page { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 60vh; text-align: center; gap: 1rem; }
 .error-page .error-code { font-family: var(--font-rick); font-size: 7rem; color: var(--color-primary); text-shadow: 0 0 20px rgba(255,20,147,0.6); line-height: 1; }
 .error-page h2 { font-family: var(--font-rick); font-size: 1.8rem; color: var(--color-text); }
@@ -621,9 +601,7 @@ body {
 }
 .btn-back:hover { background: var(--color-glow); color: #fff; box-shadow: var(--glow); }
 
-/* ═══════════════════════════════
-   RESPONSIVE
-═══════════════════════════════ */
+
 @media (max-width: 768px) {
   .character-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1rem; }
   .page-title     { font-size: 1.7rem; }
@@ -652,3 +630,6 @@ body {
   .profile-name       { font-size: 1.6rem; }
   .profile-grid       { grid-template-columns: 1fr; gap: 0.7rem; }
 }
+
+
+

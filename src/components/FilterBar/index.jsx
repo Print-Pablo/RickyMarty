@@ -9,10 +9,7 @@ const SPECIES_LIST = [
   'Cronenberg',
 ]
 
-/**
- * Barra de botones para filtrar personajes por especie.
- * Siempre hay una especie seleccionada (no permite deseleccionar).
- */
+
 function FilterBar({ selected, onSelect }) {
   return (
     <div className="filter-section">
@@ -33,3 +30,4 @@ function FilterBar({ selected, onSelect }) {
 }
 
 export default FilterBar
+

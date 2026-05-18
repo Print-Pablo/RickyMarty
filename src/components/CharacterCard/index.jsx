@@ -1,7 +1,4 @@
-/**
- * Tarjeta individual de personaje.
- * Llama a onSelect al hacer click para ver el detalle.
- */
+
 function CharacterCard({ character, onSelect }) {
   const { name, image, status, species, gender } = character
 
@@ -27,3 +24,4 @@ function CharacterCard({ character, onSelect }) {
 }
 
 export default CharacterCard
+

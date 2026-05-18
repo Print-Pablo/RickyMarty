@@ -12,7 +12,7 @@ function Home() {
 
   const isSearching = searchQuery !== ''
 
-  // Carga normal (todos) o busqueda por nombre segun estado
+  
   const { characters, loading, error, totalPages } = useCharacters(
     '',
     isSearching ? 1 : page,
@@ -67,3 +67,4 @@ function Home() {
 }
 
 export default Home
+

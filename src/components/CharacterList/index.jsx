@@ -1,4 +1,4 @@
-import CharacterCard from './CharacterCard'
+import CharacterCard from '../CharacterCard'
 
 function CharacterList({ characters, onSelect }) {
   if (characters.length === 0) {
@@ -19,3 +19,4 @@ function CharacterList({ characters, onSelect }) {
 }
 
 export default CharacterList
+

@@ -5,7 +5,7 @@ function Landing() {
 
   return (
     <div className="landing">
-      {/* Fondo de particulas/estrellas decorativas */}
+      {}
       <div className="landing-stars" aria-hidden="true">
         {Array.from({ length: 30 }).map((_, i) => (
           <span key={i} className="star" style={{
@@ -19,9 +19,9 @@ function Landing() {
         ))}
       </div>
 
-      {/* Contenido principal */}
+      {}
       <div className="landing-content">
-        {/* Encabezado */}
+        {}
         <header className="landing-header">
           <img src="/plumbus.png" alt="Plumbus" className="landing-plumbus" />
           <h1 className="landing-title">
@@ -30,14 +30,14 @@ function Landing() {
           </h1>
         </header>
 
-        {/* Descripcion */}
+        {}
         <p className="landing-description">
           Explora todos los personajes de la serie a traves de la API oficial de Rick and Morty.
           Navega por cientos de personajes, filtralos por especie y busca a tu favorito.
           Una experiencia interdimensional creada con React.
         </p>
 
-        {/* Portal - boton de entrada */}
+        {}
         <div className="portal-wrapper">
           <p className="portal-hint">Haz clic en el portal para comenzar</p>
           <button
@@ -50,7 +50,7 @@ function Landing() {
           </button>
         </div>
 
-        {/* Pie de pagina */}
+        {}
         <footer className="landing-footer">
           <p className="landing-author">Juan Pablo Cardenas</p>
           <p className="landing-subject">Programacion Web</p>
@@ -61,3 +61,4 @@ function Landing() {
 }
 
 export default Landing
+

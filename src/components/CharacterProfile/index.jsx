@@ -1,7 +1,4 @@
-/**
- * Vista de perfil completo al hacer click en una tarjeta.
- * Muestra todos los datos del personaje y boton "Volver".
- */
+
 function CharacterProfile({ character, onBack }) {
   const { name, image, status, species, gender, origin, location, episode } = character
 
@@ -61,3 +58,4 @@ function CharacterProfile({ character, onBack }) {
 }
 
 export default CharacterProfile
+

@@ -9,13 +9,13 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-inner">
-        {/* Logo */}
+        {}
         <NavLink to="/" className="navbar-brand" onClick={closeMenu}>
           <img src="/plumbus.png" alt="Plumbus" className="navbar-logo" />
           <span>Rick &amp; Morty</span>
         </NavLink>
 
-        {/* Hamburguesa (solo mobile) */}
+        {}
         <button
           className={`hamburger ${menuOpen ? 'open' : ''}`}
           onClick={() => setMenuOpen(!menuOpen)}
@@ -26,7 +26,7 @@ function Navbar() {
           <span />
         </button>
 
-        {/* Links de navegacion */}
+        {}
         <ul className={`navbar-links ${menuOpen ? 'show' : ''}`}>
           <li>
             <NavLink
@@ -53,3 +53,4 @@ function Navbar() {
 }
 
 export default Navbar
+

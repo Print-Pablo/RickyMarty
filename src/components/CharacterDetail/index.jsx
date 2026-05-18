@@ -1,8 +1,4 @@
-/**
- * Resultados de busqueda:
- * - 1 resultado  → tarjeta horizontal grande clickeable
- * - Varios       → grilla de tarjetas medianas clickeables
- */
+
 function CharacterDetail({ characters, onSelect }) {
   if (characters.length === 0) return null
 
@@ -61,3 +57,4 @@ function CharacterDetail({ characters, onSelect }) {
 }
 
 export default CharacterDetail
+

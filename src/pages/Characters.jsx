@@ -41,7 +41,7 @@ function Characters() {
     setSelectedChar(null)
   }
 
-  // Vista de perfil individual (click en tarjeta)
+  
   if (selectedChar) {
     return (
       <CharacterProfile
@@ -89,3 +89,4 @@ function Characters() {
 }
 
 export default Characters
+
