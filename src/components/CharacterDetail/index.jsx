@@ -1,3 +1,4 @@
+import { translateValue } from '../../utils/translate'
 
 function CharacterDetail({ characters, onSelect }) {
   if (characters.length === 0) return null
@@ -13,22 +14,22 @@ function CharacterDetail({ characters, onSelect }) {
           <div className="detail-row">
             <span className="detail-label">Estado</span>
             <span className="detail-value">
-              <span className={`status-dot ${statusClass}`} style={{ marginRight: 6 }} />{c.status}
+              <span className={`status-dot ${statusClass}`} style={{ marginRight: 6 }} />{translateValue(c.status)}
             </span>
           </div>
           <div className="detail-row">
             <span className="detail-label">Especie</span>
-            <span className="detail-value">{c.species}</span>
+            <span className="detail-value">{translateValue(c.species)}</span>
           </div>
           <div className="detail-row">
-            <span className="detail-label">Genero</span>
-            <span className="detail-value">{c.gender}</span>
+            <span className="detail-label">Género</span>
+            <span className="detail-value">{translateValue(c.gender)}</span>
           </div>
           <div className="detail-row">
             <span className="detail-label">Origen</span>
-            <span className="detail-value">{c.origin?.name}</span>
+            <span className="detail-value">{c.origin?.name === 'unknown' ? 'Origen desconocido' : c.origin?.name}</span>
           </div>
-          <p className="detail-hint">Haz clic para ver mas detalles</p>
+          <p className="detail-hint">Haz clic para ver más detalles</p>
         </div>
       </div>
     )
@@ -44,10 +45,10 @@ function CharacterDetail({ characters, onSelect }) {
             <div className="detail-card-sm-body">
               <p className="character-name">{c.name}</p>
               <p className="character-info">
-                <span className={`status-dot ${statusClass}`} />{c.status} - {c.species}
+                <span className={`status-dot ${statusClass}`} />{translateValue(c.status)} - {translateValue(c.species)}
               </p>
-              <p className="character-info">Genero: {c.gender}</p>
-              <p className="character-info">Origen: {c.origin?.name}</p>
+              <p className="character-info">Género: {translateValue(c.gender)}</p>
+              <p className="character-info">Origen: {c.origin?.name === 'unknown' ? 'Origen desconocido' : c.origin?.name}</p>
             </div>
           </div>
         )
@@ -57,4 +58,3 @@ function CharacterDetail({ characters, onSelect }) {
 }
 
 export default CharacterDetail
-

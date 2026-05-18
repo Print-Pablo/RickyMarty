@@ -1,3 +1,5 @@
+import { translateValue } from '../../utils/translate'
+
 const SPECIES_LIST = [
   'Human',
   'Alien',
@@ -5,7 +7,7 @@ const SPECIES_LIST = [
   'Mythological Creature',
   'Animal',
   'Humanoid',
-  'Poopybutthole',
+  'Poopybutthole',        
   'Cronenberg',
 ]
 
@@ -21,7 +23,7 @@ function FilterBar({ selected, onSelect }) {
             className={`filter-btn ${selected === species ? 'active' : ''}`}
             onClick={() => onSelect(species)}
           >
-            {species}
+            {translateValue(species)}
           </button>
         ))}
       </div>
@@ -30,4 +32,3 @@ function FilterBar({ selected, onSelect }) {
 }
 
 export default FilterBar
-

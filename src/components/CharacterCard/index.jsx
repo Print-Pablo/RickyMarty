@@ -1,3 +1,4 @@
+import { translateValue } from '../../utils/translate'
 
 function CharacterCard({ character, onSelect }) {
   const { name, image, status, species, gender } = character
@@ -15,13 +16,12 @@ function CharacterCard({ character, onSelect }) {
         <p className="character-name">{name}</p>
         <p className="character-info">
           <span className={`status-dot ${statusClass}`} />
-          {status} - {species}
+          {translateValue(status)} - {translateValue(species)}
         </p>
-        <p className="character-info">Genero: {gender}</p>
+        <p className="character-info">Género: {translateValue(gender)}</p>
       </div>
     </div>
   )
 }
 
 export default CharacterCard
-

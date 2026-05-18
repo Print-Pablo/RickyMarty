@@ -1,3 +1,4 @@
+import { translateValue } from '../../utils/translate'
 
 function CharacterProfile({ character, onBack }) {
   const { name, image, status, species, gender, origin, location, episode } = character
@@ -7,6 +8,9 @@ function CharacterProfile({ character, onBack }) {
     Dead:    'status-dead',
     unknown: 'status-unknown',
   }[status] ?? 'status-unknown'
+
+  const translatedOrigin = origin?.name === 'unknown' ? 'Origen desconocido' : origin?.name
+  const translatedLocation = location?.name === 'unknown' ? 'Ubicación desconocida' : location?.name
 
   return (
     <div className="profile-wrapper">
@@ -27,24 +31,24 @@ function CharacterProfile({ character, onBack }) {
               <span className="profile-label">Estado</span>
               <span className="profile-value">
                 <span className={`status-dot ${statusClass}`} style={{ marginRight: 7 }} />
-                {status}
+                {translateValue(status)}
               </span>
             </div>
             <div className="profile-item">
               <span className="profile-label">Especie</span>
-              <span className="profile-value">{species}</span>
+              <span className="profile-value">{translateValue(species)}</span>
             </div>
             <div className="profile-item">
-              <span className="profile-label">Genero</span>
-              <span className="profile-value">{gender}</span>
+              <span className="profile-label">Género</span>
+              <span className="profile-value">{translateValue(gender)}</span>
             </div>
             <div className="profile-item">
               <span className="profile-label">Origen</span>
-              <span className="profile-value">{origin?.name}</span>
+              <span className="profile-value">{translatedOrigin}</span>
             </div>
             <div className="profile-item">
-              <span className="profile-label">Ubicacion actual</span>
-              <span className="profile-value">{location?.name}</span>
+              <span className="profile-label">Ubicación actual</span>
+              <span className="profile-value">{translatedLocation}</span>
             </div>
             <div className="profile-item">
               <span className="profile-label">Episodios</span>
@@ -58,4 +62,3 @@ function CharacterProfile({ character, onBack }) {
 }
 
 export default CharacterProfile
-
